@@ -97,6 +97,25 @@
 </body>
 
 <script src="dist/js/main.min.js"></script>
+<script> 
+    let map
+let localization = {
+    lat: 50.0882321697996,
+    lng: 19.892853328441113
+}
+let marker
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: localization
+    });
+    marker = new google.maps.Marker({
+    position: localization,
+    map: map
+});
+}
+    </script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4CJ0P9GFTlicYwFKHJfzWDqx61_mNzA0&callback=initMap"></script>
 
